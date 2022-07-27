@@ -1,4 +1,4 @@
-# Most Popular Events (Mini Data Pipeline)
+# Mini Data Pipeline Project
 Create a data pipeline using Python to assist with the sale of tickets. 
 Use Python database connector to perform data loading and to query the database programmatically.
 ### Software 
