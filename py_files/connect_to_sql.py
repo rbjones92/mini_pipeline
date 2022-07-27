@@ -8,7 +8,6 @@ from sqlalchemy import create_engine
 import datetime
 import pandas as pd
 from tabulate import tabulate
-import re
 
 # Path for data
 csv_path = ('C:/Users/Robert.Jones/Desktop/Springboard/mini_pipeline/ticket_data/third_party_sales.csv')
