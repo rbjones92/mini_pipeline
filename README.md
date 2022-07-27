@@ -14,10 +14,12 @@ Print Table to View
 ![Alt Text](screenshots/print_table.JPG?raw=true "load output")
 <br clear="left"/>
 Print Results
+<p align="center">
 ![Alt Text](screenshots/result.JPG?raw=true "load output")
-<br clear="left"/>
+</p>
+
 ## Findings
 Here are the most popular tickets in the past month
-#1: Washington Spirits vs Sky Blue FC
-#2: Christmas Spectacular
-#3: The North American International Auto Show
+#1: Washington Spirits vs Sky Blue FC <br>
+#2: Christmas Spectacular <br>
+#3: The North American International Auto Show <br>
