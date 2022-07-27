@@ -6,10 +6,13 @@
 import sqlalchemy
 from sqlalchemy import create_engine
 import datetime
-import pandas as pd 
+import pandas as pd
+from tabulate import tabulate
+import re
 
 # Path for data
 csv_path = ('C:/Users/Robert.Jones/Desktop/Springboard/mini_pipeline/ticket_data/third_party_sales.csv')
+filename = csv_path.rsplit('/',1)[1]
 # Credentials for sql login
 cred_file = open('C:/Users/Robert.Jones/Desktop/Springboard/mini_pipeline/mysql_files/creds.txt','r')
 creds = cred_file.readlines()[0]
@@ -57,7 +60,6 @@ class MiniPipeline:
             sqlalchemy.Column('customer_id',sqlalchemy.Integer()),
             sqlalchemy.Column('price',sqlalchemy.DECIMAL()),
             sqlalchemy.Column('num_tickets',sqlalchemy.Integer()),
-            extend_exisiting = True
         )
         
         # Execute statement to create table
@@ -67,25 +69,38 @@ class MiniPipeline:
         ### Read .CSV file into a pandas DF
         df = pd.read_csv(path,header=None)
 
-        # Iterate thru data, transforming as needed
-        for i,row in df.iterrows():
-            ticket_id = row[0]
-            trans_date = datetime.datetime.strptime(row[1], "%m/%d/%Y").strftime("%Y-%m-%d")
-            event_id = row[2]
-            event_name = row[3]
-            event_date = datetime.datetime.strptime(row[4], "%m/%d/%Y").strftime("%Y-%m-%d")
-            event_type = row[5]
-            event_city = row[6]
-            customer_id = row[7]
-            price = row[8]
-            num_tickets = row[9]
+        MiniPipeline.print_table()
 
-            # Insert data into dataframe
-            insert_stmt = sqlalchemy.insert(ticket_table).values(ticket_id = ticket_id,trans_date=trans_date,event_id=event_id,event_name=event_name,event_date=event_date,event_type=event_type,\
-                event_city=event_city,customer_id=customer_id,price=price,num_tickets=num_tickets)
+        add_data = input(f"Add data from {filename} ?: Y/N: ")
+        if add_data == "Y":
 
-            connection.execute(insert_stmt)
+            ### Read .CSV file into a pandas DF
+            df = pd.read_csv(path,header=None)
 
+            # Iterate thru data, transforming as needed
+            for i,row in df.iterrows():
+                ticket_id = row[0]
+                trans_date = datetime.datetime.strptime(row[1], "%m/%d/%Y").strftime("%Y-%m-%d")
+                event_id = row[2]
+                event_name = row[3]
+                event_date = datetime.datetime.strptime(row[4], "%m/%d/%Y").strftime("%Y-%m-%d")
+                event_type = row[5]
+                event_city = row[6]
+                customer_id = row[7]
+                price = row[8]
+                num_tickets = row[9]
+
+                # Insert data into dataframe
+                insert_stmt = sqlalchemy.insert(ticket_table).values(ticket_id = ticket_id,trans_date=trans_date,event_id=event_id,event_name=event_name,event_date=event_date,event_type=event_type,\
+                    event_city=event_city,customer_id=customer_id,price=price,num_tickets=num_tickets)
+
+                connection.execute(insert_stmt)
+
+        else:
+            print("No new data added")
+            pass
+
+        MiniPipeline.print_table()
 
 
 
@@ -102,6 +117,16 @@ class MiniPipeline:
             print(f'#{i+1}: {records[i][0]}')
 
         return records
+
+
+    def print_table():
+        # Call function to get connection to MySQL
+        connection = MiniPipeline.get_db_connection()
+        sql_statement = "SELECT * FROM ticket_table"
+        stmt = connection.execute(sql_statement)
+        records = stmt.fetchall()
+        df = pd.DataFrame(records,columns=['ticket_id','trans_date','event_id','event_name','event_date','event_tyep','event_city','customer_id','price','num_tickets'])
+        print(tabulate(df,headers='keys',tablefmt='fancy_grid'))
 
 
 # Create instance of MiniPipeline class
