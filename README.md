@@ -6,14 +6,15 @@ MySQL 8.0
 Python 3
 VS Code
 ## Local Execution 
-Create Table and Insert Data
+<strong>Create Table and Insert Data</strong>
 ![Alt Text](screenshots/add_data.JPG?raw=true "create empty table, add data")
+<br>
 ![Alt Text](screenshots/sql_table.JPG?raw=true "create empty table, add data")
 <br clear="left"/>
-Print Table to View
+<strong>Print Table to View</strong>
 ![Alt Text](screenshots/print_table.JPG?raw=true "load output")
 <br clear="left"/>
-Print Results
+<strong>Print Results</strong>
 <p align="center">
     <img src="screenshots/result.JPG">
 </p>
