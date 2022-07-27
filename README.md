@@ -9,6 +9,7 @@ VS Code
 <strong>Create Table and Insert Data</strong>
 ![Alt Text](screenshots/add_data.JPG?raw=true "create empty table, add data")
 <br clear="left"/><br clear="left"/><br clear="left"/>
+<strong>MySQL Table with Data</strong>
 ![Alt Text](screenshots/sql_table.JPG?raw=true "create empty table, add data")
 <br clear="left"/><br clear="left"/><br clear="left"/>
 <strong>Print Table to View</strong>
