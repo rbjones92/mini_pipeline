@@ -21,7 +21,7 @@ VS Code
 </p>
 
 ## Findings
-Here are the most popular tickets in the past month <br>
+The most popular tickets are <br>
 #1: Washington Spirits vs Sky Blue FC <br>
 #2: Christmas Spectacular <br>
 #3: The North American International Auto Show <br>
