@@ -10,10 +10,10 @@ VS Code
 ![Alt Text](screenshots/add_data.JPG?raw=true "create empty table, add data")
 <br clear="left"/><br clear="left"/><br clear="left"/>
 ![Alt Text](screenshots/sql_table.JPG?raw=true "create empty table, add data")
-<br clear="left"/>
+<br clear="left"/><br clear="left"/><br clear="left"/>
 <strong>Print Table to View</strong>
 ![Alt Text](screenshots/print_table.JPG?raw=true "load output")
-<br clear="left"/>
+<br clear="left"/><br clear="left"/><br clear="left"/>
 <strong>Print Results</strong>
 <p align="center">
     <img src="screenshots/result.JPG">
