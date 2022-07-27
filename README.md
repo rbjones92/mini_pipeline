@@ -8,7 +8,7 @@ VS Code
 ## Local Execution 
 <strong>Create Table and Insert Data</strong>
 ![Alt Text](screenshots/add_data.JPG?raw=true "create empty table, add data")
-<br>
+<br clear="left"/><br clear="left"/><br clear="left"/>
 ![Alt Text](screenshots/sql_table.JPG?raw=true "create empty table, add data")
 <br clear="left"/>
 <strong>Print Table to View</strong>
@@ -20,7 +20,7 @@ VS Code
 </p>
 
 ## Findings
-Here are the most popular tickets in the past month
+Here are the most popular tickets in the past month <br>
 #1: Washington Spirits vs Sky Blue FC <br>
 #2: Christmas Spectacular <br>
 #3: The North American International Auto Show <br>
