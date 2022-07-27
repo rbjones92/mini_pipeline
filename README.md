@@ -15,7 +15,7 @@ Print Table to View
 <br clear="left"/>
 Print Results
 <p align="center">
-![Alt Text](screenshots/result.JPG?raw=true "load output")
+    <img width="460" height="300" src="screenshots/result.JPG">
 </p>
 
 ## Findings
