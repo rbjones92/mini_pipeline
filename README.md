@@ -8,7 +8,7 @@ VS Code
 ## Local Execution 
 Create Table and Insert Data
 ![Alt Text](screenshots/add_data.JPG?raw=true "create empty table, add data")
-![Alt Text](screenshots/add_data.JPG?raw=true "create empty table, add data")
+![Alt Text](screenshots/sql_table.JPG?raw=true "create empty table, add data")
 Print Table to View
 ![Alt Text](screenshots/print_table.JPG?raw=true "load output")
 Print Results
