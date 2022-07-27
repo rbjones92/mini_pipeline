@@ -15,7 +15,7 @@ Print Table to View
 <br clear="left"/>
 Print Results
 <p align="center">
-    <img width="460" height="300" src="screenshots/result.JPG">
+    <img src="screenshots/result.JPG">
 </p>
 
 ## Findings
