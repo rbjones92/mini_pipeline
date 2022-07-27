@@ -7,10 +7,10 @@ Python 3
 VS Code
 ## Local Execution 
 Create Table and Insert Data
-![Alt Text](screenshot/add_data.JPG?raw=true "create empty table, add data")
-![Alt Text](screenshot/add_data.JPG?raw=true "create empty table, add data")
+![Alt Text](screenshots/add_data.JPG?raw=true "create empty table, add data")
+![Alt Text](screenshots/add_data.JPG?raw=true "create empty table, add data")
 Print Table to View
-![Alt Text](screenshot/print_table.JPG?raw=true "load output")
+![Alt Text](screenshots/print_table.JPG?raw=true "load output")
 Print Results
-![Alt Text](screenshot/result.JPG?raw=true "load output")
+![Alt Text](screenshots/result.JPG?raw=true "load output")
 ## Findings
